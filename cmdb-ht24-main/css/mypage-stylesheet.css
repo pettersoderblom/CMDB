@@ -1,0 +1,527 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #2e1111;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+
+h2 {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+
+h3 {
+  font-size: 30px;
+  color: white;
+}
+
+h4 {
+  font-size: 20px;
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: rgb(66, 64, 64);
+}
+
+p {
+  font-size: 16px;
+  color: white;
+}
+
+nav {
+  background-color: rgb(66, 64, 64);
+  font-size: xx-large;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  float: left;
+  margin: 20px;
+  height: 50px;
+}
+
+nav li img {
+  width: 50px;
+}
+
+nav li img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+nav input {
+  width: 200px;
+  height: 40px;
+  background-color: white;
+  border: 2px black;
+  border-radius: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+
+#omdb-button {
+  width: 100px;
+  height: 40px;
+  margin: 20px;
+  border: 2px black;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px black;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.user-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    margin-right: 10px;
+    width: 50px;
+  }
+}
+
+#user-name {
+  font-size: 20px;
+  margin: 10px;
+}
+
+#avatar {
+  width: 40px;
+  border-radius: 50%;
+}
+
+header {
+  background-color: black;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  #camera {
+    width: 100px;
+    margin-right: 20px;
+  }
+  p {
+    font-size: 20px;
+    margin-top: 10px;
+    font-style: italic;
+  }
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  background-color: #2e1111;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section div {
+  margin: 10px;
+}
+
+.mywatchlist-container img {
+  width: 100px;
+  height: auto;
+}
+
+.mywatchlist-container div {
+  display: flex;
+}
+
+.myfollower-container img {
+  width: 50px;
+  height: auto;
+}
+
+.myfollowee-container img {
+  width: 50px;
+  height: auto;
+}
+
+img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.topreviewers-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  border-radius: 25px;
+  background-color: black;
+  border: 2px solid #5a3939;
+  margin-bottom: 50px;
+}
+
+.topreviewers-header,
+.topreviewers-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 10px;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.topreviewers-header {
+  font-weight: bold;
+}
+
+.topraters-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  border-radius: 25px;
+  background-color: black;
+  border: 2px solid #5a3939;
+}
+
+.topraters-header,
+.topraters-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 10px;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.topraters-header {
+  font-weight: bold;
+}
+
+.myfollowee-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  background-color: black;
+  border: 2px solid #5a3939;
+  padding: 30px;
+  margin: 5px auto;
+  align-items: center;
+}
+
+.followee-item {
+  margin: 0;
+}
+
+.followers-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.followers-list div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-left: 0;
+  margin-right: 50px;
+}
+
+.followers-list img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 8px;
+}
+
+.myfollower-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  background-color: black;
+  border: 2px solid #5a3939;
+  padding: 30px;
+  margin: 5px auto;
+  align-items: center;
+}
+
+.mywatchlist-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  background-color: black;
+  border: 2px solid #5a3939;
+  padding: 30px;
+  margin: 5px auto;
+  align-items: center;
+}
+
+.watchlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.mybadges-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  background-color: black;
+  border: 2px solid #5a3939;
+  padding: 30px;
+  margin: 5px auto;
+  align-items: center;
+}
+
+.total-badges {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.badges-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.badge-item {
+  background-color: rgb(66, 64, 64);
+  border: 2px solid #5a3939;
+  border-radius: 50px;
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badge-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.badge-item h4 {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  background-color: none;
+}
+
+.badge-item p {
+  font-size: 0.9em;
+  color: white;
+  margin: 5px 0;
+  text-align: center;
+}
+
+footer {
+  background-color: rgb(66, 64, 64);
+  text-align: center;
+  padding-bottom: 10px;
+
+  img {
+    width: 50px;
+  }
+
+  h4 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    color: white;
+  }
+
+  p {
+    color: white;
+  }
+}
+
+footer div {
+  float: none;
+  width: 100%;
+}
+
+.footer-icon {
+  width: 33%;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.clearfix {
+  overflow: hidden;
+}
+
+#custom-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.alert-content {
+  background: white;
+  border: 5px solid #5a3939;
+  padding: 30px;
+  width: 350px;
+  max-width: 90%;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.alert-content img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+#alert-message {
+  color: black;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#close-alert {
+  margin-top: 20px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media all and (max-width: 800px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  header #camera {
+    display: none;
+  }
+
+  .user-profile {
+    margin-left: 0;
+  }
+
+  #omdb-button {
+    margin-right: 0;
+  }
+}
+
+@media all and (max-width: 680px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  nav li img {
+    width: 80px;
+  }
+
+  nav input {
+    margin-top: 20px;
+    width: 270px;
+  }
+
+  #omdb-button {
+    margin: 20px;
+    width: 200px;
+  }
+}
+
+@media all and (max-width: 380px) {
+  .topraters-container {
+    width: 320px;
+  }
+
+  .topraters {
+    width: 260px;
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 340px) {
+  .topraters-container {
+    width: 280px;
+  }
+
+  .topraters {
+    width: 220px;
+    font-size: 10px;
+  }
+}
+
+@media all and (max-width: 380px) {
+  .topreviewers-container {
+    width: 320px;
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 340px) {
+  .topreviewers-container {
+    width: 280px;
+    font-size: 10px;
+  }
+}

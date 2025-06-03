@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Cineasternas filmklubb</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/searchresult-stylesheet.css"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+  </head>
+
+  <body>
+    <nav class="clearfix">
+      <ul>
+        <li>
+          <a href="index.html"
+            ><img src="images/logo.jpg" alt="logo" title="Logo" id="logo"
+          /></a>
+        </li>
+        <input
+          id="search-input"
+          type="text"
+          name="search"
+          onfocus="this.value=''"
+          placeholder="Sök film"
+        />
+        <button id="omdb-button">Sök</button>
+        <li class="user-profile"></li>
+      </ul>
+    </nav>
+
+    <header class="clearfix">
+      <div>
+        <a href="index.html"
+          ><img src="images/logo.jpg" alt="camera" title="Camera" id="camera"
+        /></a>
+        <h1>Cineasternas filmklubb</h1>
+      </div>
+      <p>En community för dig som älskar film!</p>
+    </header>
+
+    <div id="custom-alert" style="display: none">
+      <div class="alert-content">
+        <img src="images/logo.jpg" alt="Logo" />
+        <p id="alert-message">Detta är ditt meddelande!</p>
+        <button id="close-alert">Stäng</button>
+      </div>
+    </div>
+
+    <h2>Sökresultat</h2>
+
+    <main class="searchresult-container clearfix flex-container">
+      <article class="searchresult-article">
+        <img />
+        <h4 class="movie-title">Titel:</h4>
+        <p class="imdb-rating">Imdb Rating:</p>
+        <p class="cmdb-rating">Cmdb Rating:</p>
+        <p class="tagline">Plot:</p>
+      </article>
+    </main>
+
+    <footer class="clearfix flex-container">
+      <h4>© 2024 Cineasternas filmklubb</h4>
+      <div class="flex-container" id="footer-div">
+        <div class="footer-icon">
+          <img src="images/phone.png" alt="telephone" title="Telephone" />
+          <p>Ring oss på: 0123-456789</p>
+        </div>
+        <div class="footer-icon">
+          <img src="images/mail.png" alt="email" title="Email" />
+          <p>Mejla oss på: film@klubb.se</p>
+        </div>
+        <div class="footer-icon">
+          <img src="images/fb.png" alt="facebook" title="Facebook" />
+          <p>Följ oss på Facebook</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script type="module" src="./js/app-searchresult.js"></script>
+</html>
