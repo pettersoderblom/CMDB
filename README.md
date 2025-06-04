@@ -1,7 +1,6 @@
 # 🎬 Cineasternas Filmklubb – A Movie Site with Ratings, Reviews & Followers
 
-**Cineasternas Filmklubb** is a web-based application built as a school project by two students at Mid Sweden University.  
-This was our first project working with JavaScript, HTML, CSS, and API integrations.
+**Cineasternas Filmklubb** is a web-based application built as a school project by two students at Mid Sweden University in autumn 2024. This was our first project working with JavaScript, HTML, CSS, and API integrations.
 
 The site allows users to:
 - Search for movies using the OMDb API
